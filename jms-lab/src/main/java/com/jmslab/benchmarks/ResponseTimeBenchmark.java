@@ -22,16 +22,24 @@ public class ResponseTimeBenchmark {
         metrics1.start();
 
         // ---------------- producer test ----------------
-        for (int i = 0; i < 1000; i++) {
-            producer.sendMessage(payload);
+        try {
+            for (int i = 0; i < 1000; i++) {
+                producer.sendMessage(payload);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         metrics1.stop();
 
         metrics2.start();
 
         // ---------------- consumer test ----------------
-        for (int i = 0; i < 1000; i++) {
-            consumer.receiveMessage();
+        try {
+            for (int i = 0; i < 1000; i++) {
+                consumer.receiveMessage();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         metrics2.stop();

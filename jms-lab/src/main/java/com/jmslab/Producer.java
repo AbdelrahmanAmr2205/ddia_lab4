@@ -19,10 +19,10 @@ public class Producer {
         this.myMetrics = metrics;
     }
 
-    public void start(){
+    public void start() {
         this.start("TEST.FOO");
     }
-    public void start(String queueName) {
+    public void start(String queueName){
         try {
             // Create a Connection
             ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
@@ -44,7 +44,7 @@ public class Producer {
             e.printStackTrace();
         }
     }
-    public void sendMessage(String text) {
+    public void sendMessage(String text) throws Exception {
         try {
             long sendTime = System.nanoTime();
 
@@ -64,6 +64,7 @@ public class Producer {
         catch (Exception e) {
             System.out.println("Caught: " + e);
             e.printStackTrace();
+            throw e;
         }
     }
 

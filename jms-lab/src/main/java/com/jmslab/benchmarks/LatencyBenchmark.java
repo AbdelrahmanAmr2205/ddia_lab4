@@ -22,9 +22,13 @@ public class LatencyBenchmark {
 
         int N = 10000;
 
-        for (int i = 0; i < N; i++) {
-            producer.sendMessage(payload);
-            consumer.receiveMessage();
+        try {
+            for (int i = 0; i < N; i++) {
+                producer.sendMessage(payload);
+                consumer.receiveMessage();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         metrics.stop();

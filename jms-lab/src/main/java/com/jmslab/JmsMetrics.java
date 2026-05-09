@@ -87,6 +87,16 @@ public class JmsMetrics {
         return medianMs(responseTimesNs);
     }
 
+    public int getMessageCount() {
+        return messageCount;
+    }
+
+    public void resetMessageCount() {
+        messageCount = 0;
+        responseTimesNs.clear();
+        latencySamplesNs.clear();
+    }
+
     // Output
     public void printResults() {
 

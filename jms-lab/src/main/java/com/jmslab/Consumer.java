@@ -48,7 +48,7 @@ public class Consumer implements ExceptionListener{
         }
     }
 
-    public void receiveMessage() {
+    public void receiveMessage() throws Exception{
         try {
             // Wait for a message
             long start = System.nanoTime();
@@ -70,15 +70,16 @@ public class Consumer implements ExceptionListener{
                 // System.out.println("Received: " + textMessage.getText());
 
             } else {
-                if(message == null) {
-                    System.out.println("No message received");
-                }else{
-                    System.out.println("Received: " + message);
-                }
+                // if(message == null) {
+                //     System.out.println("No message received");
+                // }else{
+                //     System.out.println("Received: " + message);
+                // }
             }
         } catch (Exception e) {
             System.out.println("Caught: " + e);
             e.printStackTrace();
+            throw e;
         }
     }
 
