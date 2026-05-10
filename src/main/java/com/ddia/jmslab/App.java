@@ -1,8 +1,8 @@
-package com.jmslab;
+package com.ddia.jmslab;
 
-import com.jmslab.benchmarks.LatencyBenchmark;
-import com.jmslab.benchmarks.ResponseTimeBenchmark;
-import com.jmslab.benchmarks.ThroughputBenchmark;
+import com.ddia.jmslab.benchmarks.LatencyBenchmark;
+import com.ddia.jmslab.benchmarks.ResponseTimeBenchmark;
+import com.ddia.jmslab.benchmarks.ThroughputBenchmark;
 
 /**
  * Hello world!

@@ -1,4 +1,4 @@
-package com.jmslab;
+package com.ddia.jmslab;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -85,6 +85,10 @@ public class JmsMetrics {
 
     public double getMedianResponseTimeMs() {
         return medianMs(responseTimesNs);
+    }
+
+    public int getMessageCount() {
+        return messageCount;
     }
 
     // Output

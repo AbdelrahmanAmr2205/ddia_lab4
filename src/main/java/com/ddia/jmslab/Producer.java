@@ -1,4 +1,4 @@
-package com.jmslab;
+package com.ddia.jmslab;
 
 import javax.jms.Connection;
 import javax.jms.DeliveryMode;

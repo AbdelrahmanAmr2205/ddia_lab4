@@ -1,8 +1,8 @@
-package com.jmslab.benchmarks;
+package com.ddia.jmslab.benchmarks;
 
-import com.jmslab.Consumer;
-import com.jmslab.JmsMetrics;
-import com.jmslab.Producer;
+import com.ddia.jmslab.Consumer;
+import com.ddia.jmslab.JmsMetrics;
+import com.ddia.jmslab.Producer;
 
 public class LatencyBenchmark {
 

@@ -1,4 +1,4 @@
-package com.jmslab;
+package com.ddia.jmslab;
 
 public class JMSConfig {
     public static final String BROKER_URL = "tcp://localhost:61616";
